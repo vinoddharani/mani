@@ -8,6 +8,19 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Parent</name>
+  <profiles>
+        <profile>
+               <id>sonar</id>
+               <activation>
+                      <activeByDefault>true</activeByDefault>
+                      </activation>
+               <properties>
+                      <sonar.host.url>
+                             http://localhost:9000
+                             </sonar.host.url>
+                      </properties>
+         </profile>
+         </profiles>
   <description>Just a pom that makes it easy to build both projects at the same time.</description>
 
   <modules>
